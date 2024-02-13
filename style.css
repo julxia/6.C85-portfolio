@@ -1,0 +1,31 @@
+body {
+    /* Set line height to 1.5 times the font size
+       and use the OS’s UI font as the website font
+     */
+    font: 100%/1.5 system-ui;
+   }
+
+label, input, textarea, button {
+	/* Make these elements behave like block elements,
+	   i.e. create line breaks before and after
+	 */
+	display: block;
+}
+
+label {
+	/* Add some space before and after each label */
+	margin-block: 1em; /* em is a unit that scales with the font size */
+}
+
+input, textarea {
+	/* Fill the whole available width. */
+	width: 100%;
+
+	/* Special sizing mode that makes the element’s width
+	   include internal spacing (padding) and borders
+	 */
+	box-sizing: border-box;
+
+	/* Use the same font and font metrics as the rest of the page */
+	font: inherit;
+}
