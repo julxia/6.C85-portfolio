@@ -1,31 +1,55 @@
-body {
+:root{
+	--color-accent: oklch(90.45% 0.0973 83.17);
+}
+
+	body {
     /* Set line height to 1.5 times the font size
        and use the OS’s UI font as the website font
      */
+	accent-color: var(--color-accent);
     font: 100%/1.5 system-ui;
+	max-width: 100ch; 
+	margin-inline: auto; 
+	padding-inline: 2ch
    }
 
-label, input, textarea, button {
-	/* Make these elements behave like block elements,
-	   i.e. create line breaks before and after
-	 */
-	display: block;
-}
+   .navbar{
+	display: flex;
+	border-bottom-width: 1px;
 
-label {
-	/* Add some space before and after each label */
-	margin-block: 1em; /* em is a unit that scales with the font size */
-}
+	.current{
+		border-bottom-width: 0.5em;
+		border-bottom-color: var(--color-accent);
+	}
+   }
 
-input, textarea {
-	/* Fill the whole available width. */
-	width: 100%;
+   .navbar a{
+	flex: 3;
+	padding: 0.5em;
+	/* background-color: #ffff0075; */
+	text-decoration: none;
+	color: inherit;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-color: oklch(90.71% 0.0294 83.17);
+  }
 
-	/* Special sizing mode that makes the element’s width
-	   include internal spacing (padding) and borders
-	 */
-	box-sizing: border-box;
+  .navbar a:hover{
+	border-bottom-width: 0.5em;
+	border-bottom-color: var(--color-accent);
+	background-color: oklch(from var(--color-accent) 60% 80% h / 10%);
+  }
 
-	/* Use the same font and font metrics as the rest of the page */
-	font: inherit;
-}
+  img{
+	max-width: 90%
+  }
+
+  h1{
+	font-size: 400%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+	line-height: 1.0;
+	text-wrap: balance;
+	padding-bottom: 5px;
+  }
