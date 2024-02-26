@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A2: Exploratory Data Analysis</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small
+          ><a
+            href="https://vis-society.github.io/assignments/A2.html"
+            style="text-decoration: none; color: inherit"
+            target="_blank"
+            >Assignment 2</a
+          ></small
+        >
+        Exploratory Data Analysis
+      </h1>
+
+      <p><strong>Julia Xia</strong> — <em>juliaxia@mit.edu</em></p>
+    </header>
+    <main>
+      <section>
+        <h2>Subtheme: Exclusionary Zoning</h2>
+        <h3>Dataset</h3>
+        <p>
+          This dataset is provided by the Metropolitan Area Planning Council
+          (MAPC). It contains 2010 census information and geographical data
+          regarding single family zoning and other types of housing zones in
+          Metro Boston Municipalities; in addition to aggregate age, household
+          size,and race data. This dataset has already filtered out non-housing
+          zones, and combined zones according to whether is is only
+          single-family zoning by munipalities. Included within this dataset is
+          also 2014-2018 income data aggregated by zoning area into block
+          groups. Given the many attributes contained in this dataset, I'm
+          interested in exploring and understanding possibly inherent systemic
+          qualities/patterns that contribute to or arise from the housing
+          crisis.
+        </p>
+
+        <h3>Overall Analysis Questions</h3>
+        <ol>
+          <li>
+            <h4>
+              What does the distribution of various housing zones compared to
+              municipal populations?
+            </h4>
+            <p>
+              <strong>Motivation:</strong>
+              I want to understand the general landscape of housing within
+              Massachusetts municipalities. In Badger and Bui's article
+              <a href="#footnote-1">[1]</a>, we are able to get a rough idea of
+              housing distribution based on visualization of states like New
+              York and Georgia. A similar visualization would aid in our
+              understanding of Massachusetts' housing zones. Exploring this
+              question seems will aid in starting to understand the data, and
+              build a background for the overall housing situation in the
+              Massachusetts municipalities.
+            </p>
+          </li>
+          <li>
+            <h4>
+              How do different factors (ie. income, race, and age distribution)
+              compare in single housing zones versus other housing zones?
+            </h4>
+            <p>
+              <strong>Motivation:</strong>
+              We have seen a historical pattern of various groups affected by
+              systemic discrimination; in housing particularly, there have been
+              instances of redlining (eg. Black and Latinos in South Bronx -
+              1970s), and even modern biases within the mortagage approval
+              process
+              <a href="#footnote-2">[2]</a>. This motivates my question to
+              understand whether similar patterns arise here whether as a cause
+              or result of the housing crisis. It may also help us understand
+              housing demands and other patterns.
+            </p>
+          </li>
+          <li>
+            <h4>
+              Compared to a municipal's population, how much land are single
+              family homes taking up and how many people are they actually
+              housing?
+            </h4>
+            <p>
+              <strong>Motivation:</strong>
+              From the background readings<a href="#footnote-2">[2]</a
+              ><a href="#footnote-3">[3]</a>, we learned that single family
+              homes take up quite a lot of space and even converting a small
+              percentange of single-family homes could create a many new homes
+              for people who need it. This motivated me to pose this question to
+              understand how much space is being occupied, the population of
+              people that need housing to potentially predict how many more
+              people could be housed. Furthermore, I believe I read somewhere
+              that many of these single-family homes are only occupied by 1-2
+              older individuals (more expensive to maintain). From personal
+              experience, younger individuals tend to move into apartments or
+              more long-short term housing. Insights from the previous question
+              should help us understand what the exact needs are and if we could
+              potentially meet them via upzoning.
+            </p>
+          </li>
+          <!-- <li>
+            <h4>How has housing zoning changed across time?</h4>
+            <p>
+              <strong>Motivation:</strong>
+              From the background reading <a href="#footnote-2">[2]</a>, we
+              learn that it wasn't always single-family zones everywhere (only
+              became designed around a century ago). Thus, it would be
+              interesting to learn exactly how housing has changed (eg. zones
+              have been establsihed) in correlation to historical or modern
+              events. It'd be interesting to see if any policy changes occured
+              and how that affected housing in certain areas.
+            </p>
+          </li>
+          <li>
+            <h4>
+              What does ownership status (ie. homeowner, renter) look like
+              across different zoning and municipalities?
+            </h4>
+            <p>
+              <strong>Motivation:</strong>
+              From lecture, we noted the increasing speculation and "flipping"
+              of properties as investment, which drives up housing prices and
+              lowers supply for actual residents. I'm not sure if this dataset
+              will be able to fully reveal this pattern, based upon the
+              metadata; however I think it is worth exploring to further
+              understand the landscape of housing ownership.
+            </p>
+          </li> -->
+        </ol>
+      </section>
+
+      <section>
+        <h2>Discoveries & Insights</h2>
+
+        <figure>
+          <img
+            style="width: 100%; height: auto"
+            src="./images/a2/bos_housing_landscape.png"
+            alt=""
+          />
+          <figcaption>
+            <p>
+              This graph compares the number of households across all municipalities with each bar colored based on whether the municipal is an only single-family zone, other, or has a combination of both. 
+              Furthermore, the line graph follows the overall population in each municipality.
+              <ul>
+                <li>
+                  This graph was a good sanity check that the number of households correlated with the population in each municipal. The only interesting inconsistency was with Lynn and Neton, where there appeared to be a large jump in the graph. This will be interesting to explore given more data on how much land is actually taken up for single-family housing relative to overall land size. At this current moment, we only have what percent of land out of all home which is not very useful because Lynn and Newton are both only-single family zones.
+                </li>
+                <li>
+                  It makes sense that many municipalities are not just single-family zones or not (very binary). However, for these zones that are only one or the other, it'll be interesting to explore how various factors like race/ethnicity, income, household size affect who lives in which zones.
+                </li>
+                <li>
+                  As hypothesized, only-single family zones have the lower end of populations. I wonder how much land and area they are relative to other munipalities, or whether it is simply from housing or other factors (which may require more data).
+                </li>
+              </ul>
+              <strong>Note:</strong>
+              Removed Boston and Cambridge, both of which are not single housing
+              zones, in order to better understand the variance of remaining
+              municipalities.
+            </p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            style="width: 100%; height: auto"
+            src="./images/a2/age-population-breakdown.png"
+            alt=""
+          />
+          <figcaption>
+            These pie charts breaks down the age ranges given whether the zone is a only-single family or other.
+            <ul>
+              <li>
+                Zones that are not single-family housing have 2x more people than zones that are only single family. However, we should probably explore the number of building (require more data) relative to number of households to better understand how much more significantly multi-family homes contribute to overall housing population.
+              </li>
+            </ul>
+            
+          </p></figcaption>
+        </figure>
+
+        <figure>
+          <img
+            style="width: 100%; height: auto"
+            src="./images/a2/race-ethnicity-breakdown.png"
+            alt=""
+          />
+          <figcaption>This graph breaks down the race given whether the zone is a only-single family or other.
+            <ul>
+              <li>
+                There is significantly more Hispanic and Latino families in munipalities that are not only-single family. It is worth exploring the correlation between race/ethnicity against household size given the large variance in data between population sizes.             
+              </li>
+            </ul>
+            <strong>Note:</strong>
+            Removed Non-Hispanic White Population because they dominated in both zones and I wanted to further highlight variance in remaining data.
+            </figcaption>
+        </figure>
+
+        <figure>
+          <img
+            style="width: 100%; height: auto"
+            src="./images/a2/household-zoning-breakdown.png"
+            alt=""
+          />
+          <figcaption>This graph breaks down housing size between non-family vs family households as well as different housing sizes across zones that are only-single family and not.
+            <ul>
+              <li>
+                There is significantly more non-family household relative to family households in zones that were not single-family only. It would be interesting to further explore how incompare compares between family and non-family households.
+              </li>
+              <li>
+                  The pie charts for overall household size demonstrate overall structure in each housing zone, however, it'd be interesting to further visualize how the numbers look like relative to eachother as currently, the ratios look relatively the same.
+              </li>
+            </ul></figcaption>
+        </figure>
+
+        <figure>
+          <img
+            style="width: 100%; height: auto"
+            src="./images/a2/income-housing-breakdown.png"
+            alt=""
+          />
+          <figcaption>This graph breaks down the number of individuals for various income in each housing zone (only-single family vs other housing zones).
+            <ul>
+              <li>
+                As hypothesized, those with significantly higher incomes were more likely to lve in only-singly family zones (making up more than 67% of the population). It's interesting to see the much greater spread (almost more "evenly distributed") income breakdown for households living in other housing zones.
+              </li>
+            </ul>
+            </figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Summary</h2>
+
+        <p>Overall, I was able to confirm most of my initial hypothesis through this data exploratory analysis. However, there is definitely more visualization to be done to understand the data which could also be aided through more data about each specific municipal.</p>
+      </section>
+      <section>
+        <h2>References</h2>
+        <p id="footnote-1">
+          [1]
+          <a
+            href="https://www.nytimes.com/interactive/2019/06/18/upshot/cities-across-america-question-single-family-zoning.html?action=click&module=RelatedLinks&pgtype=Article"
+            >Cities Start to Question an American Ideal: A House With a Yard on
+            Every Lot</a
+          >
+        </p>
+        <p id="footnote-2">
+          [2]
+          <a
+            href="https://themarkup.org/denied/2021/08/25/the-secret-bias-hidden-in-mortgage-approval-algorithms"
+            >The Secret Bias Hidden in Mortgage-Approval Algorithms</a
+          >
+        </p>
+        <p id="footnote-3">
+          [2]
+          <a
+            href="https://www.washingtonpost.com/dc-md-va/2023/10/20/missing-middle-housing-comic/?pwapi_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyZWFzb24iOiJnaWZ0IiwibmJmIjoxNzA3NDU0ODAwLCJpc3MiOiJzdWJzY3JpcHRpb25zIiwiZXhwIjoxNzA4ODM3MTk5LCJpYXQiOjE3MDc0NTQ4MDAsImp0aSI6Ijc0MTAyZjI2LTIxNjItNGFkYi05YThjLTIwYjg1NzUwNTczMiIsInVybCI6Imh0dHBzOi8vd3d3Lndhc2hpbmd0b25wb3N0LmNvbS9kYy1tZC12YS8yMDIzLzEwLzIwL21pc3NpbmctbWlkZGxlLWhvdXNpbmctY29taWMvIn0.7LMxchYp2bC04t5nd2wPc7E98URbsqG54Es5TbFzBCk"
+            >Houses are too expensive. Apartments are too small. Is this a
+            fix?</a
+          >
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
