@@ -1,5 +1,6 @@
 :root{
 	--color-accent: oklch(90.45% 0.0973 83.17);
+	color-scheme: light dark
 }
 
 	body {
@@ -13,7 +14,7 @@
 	padding-inline: 2ch
    }
 
-   .navbar{
+   nav {
 	display: flex;
 	border-bottom-width: 1px;
 
@@ -23,7 +24,7 @@
 	}
    }
 
-   .navbar a{
+   nav a{
 	flex: 3;
 	padding: 0.5em;
 	/* background-color: #ffff0075; */
@@ -34,10 +35,10 @@
 	border-bottom-color: oklch(90.71% 0.0294 83.17);
   }
 
-  .navbar a:hover{
+  a:hover{
 	border-bottom-width: 0.5em;
 	border-bottom-color: var(--color-accent);
-	background-color: oklch(from var(--color-accent) 60% 80% h / 10%);
+	background-color: oklch(from var(--color-accent) 90% 30% h / 40%);
   }
 
   img{
@@ -52,4 +53,64 @@
 	line-height: 1.0;
 	text-wrap: balance;
 	padding-bottom: 5px;
+  }
+
+  .color-scheme-switch {
+	position: relative;
+	display: inline-block;
+	width: 45px;
+	height: 25.5px;
+  }
+  
+  .color-scheme-switch input { 
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 19.5px;
+	width: 19.5px;
+	left: 3px;
+	bottom: 3px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color:  var(--color-accent);
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px  var(--color-accent);
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(19.5px);
+	-ms-transform: translateX(19.5px);
+	transform: translateX(19.5px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+	border-radius: 25.5px;
+  }
+  
+  .slider.round:before {
+	border-radius: 50%;
   }

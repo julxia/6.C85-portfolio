@@ -1,76 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../style.css" rel="stylesheet" />
     <title>Contacts</title>
-</head>
-<body>
-    <nav class="navbar" >
-        <a href="../index.html" target="_top">Home</a>
-        <a  href="../projects/index.html" target="_top">Projects</a>
-        <a  href="../resume/index.html" target="_top">Resume</a>
-        <a  class="current" href="#" target="_top">Contact</a>
-    </nav>
-
+  </head>
+  <body>
     <h1>Contacts Page</h1>
-    <form 
-        action="mailto:juliaxia@mit.edu"
-        method="POST"
-        enctype="text/plain"
-    >   
-        <label>
+    <form action="mailto:juliaxia@mit.edu" method="GET">
+      <!-- <label>
             Email:
             <input name="email" type="email"></input>
-        </label>
-        <label>
-            Subject:
-            <input name="subject"/>   
-        </label>
-        <label>
-            Body:
-            <textarea name="body"></textarea>  
-        </label>
-        <button>Send</button>  
+        </label> -->
+      <label>
+        Subject:
+        <input name="subject" />
+      </label>
+      <label>
+        Body:
+        <textarea name="body"></textarea>
+      </label>
+      <button>Send</button>
     </form>
-</body>
-<style>
+  </body>
+  <style>
     form {
-	/* Make these elements behave like block elements,
+      /* Make these elements behave like block elements,
 	   i.e. create line breaks before and after
 	 */
-     display: grid;
-     grid-template-columns: auto 1fr;
-     gap: 1em;
-}
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1em;
+    }
 
-label, button {
-	grid-template-columns: subgrid;
-    grid-column: 1 / -1;
-}
+    label,
+    button {
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+    }
 
-input, textarea {
-	/* Fill the whole available width. */
-	width: 100%;
-}
+    input,
+    textarea {
+      /* Fill the whole available width. */
+      width: 100%;
+    }
 
-input:focus, textarea:focus {
-    outline: 2px solid var(--color-accent);
-    border-radius: 5px;
-    border-color:rgba(255, 255, 255, 0);
-}
+    input:focus,
+    textarea:focus {
+      outline: 2px solid var(--color-accent);
+      border-radius: 5px;
+      border-color: rgba(255, 255, 255, 0);
+    }
 
-button {
-    background-color: var(--color-accent);
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-    font: inherit;
-}
+    button {
+      background-color: var(--color-accent);
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      font: inherit;
+    }
 
-button:hover{
-    background-color: oklch(from var(--color-accent) 60% 80% h / 10%);
-}
-</style>
+    button:hover {
+      background-color: oklch(from var(--color-accent) 60% 80% h / 10%);
+    }
+  </style>
+  <script type="module" src="../global.js"></script>
 </html>
