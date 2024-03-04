@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A3: Visualization Design</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small><a
+            href="https://vis-society.github.io/assignments/A3.html"
+            style="text-decoration: none; color: inherit"
+            target="_blank"
+            >Assignment 3</a
+          ></small
+        ></small>
+        Visualization Design
+      </h1>
+
+      <p><strong>Julia Xia</strong> — <em>juliaxia@mit.edu</em></p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Phase One: Sketching Visualizations</h2>
+        <figure>
+			<img style="width: 100%; height: auto" src="./images/a3/lineGraph.jpg" alt="Line Graph of 1900s v. 2000 Population Trend (Male v. Female)" />
+			<figcaption>line graph comparing gender trends between male and female identifying members of the population in 1900s and 2000s</figcaption>
+		  </figure>
+  
+		  <p>Design Rationale for Sketch 1:</p>
+  
+		  <ul>
+			<li>My main goal was to visualize the gender trends between the 1900s and 2000s. It was interesting to see that data for 1900s is more linear (downward-sloping) with age group while in the 2000s, there exists peaks and valleys.</li>
+			<li>I was hoping the visualization would communicate on variability between age buckets and reveal allow any interesting patterns to emerge.</li>
+			<li>One potential weakness is maybe the scale. Since the 2000s numbers are much bigger, I'm worried about whether the large values hide the smaller patterns (smoothes out line) in the 1900s. We could try to maybe separate this into two graphs, but could become potentially harder to compare.</li>
+			<li>In my next visualization, I'm hoping to try to be more "transparent" about the vastness of a quantity, but maintain the ability to compare gender trends.</li>
+		  </ul>
+
+        <figure>
+          <img style="width: 100%; height: auto" src="./images/a3/streamGraph.jpg" alt="Stream Graph of Male & Female Populations (1900s v. 2000s)" />
+          <figcaption>stream graph of male & female identifying populations (1900s v. 2000s)</figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 2:</p>
+
+        <ul>
+          <li>As stated above, I really wanted to properly visualization the gender ratio across years, and also variabiltiy across gender. </li>
+          <li>I think the the stream graph does a really good job of visualziating comparable quantity through area, especially since all the chunks are right next to eachother. It helps with communicating the vastness of 2000s, while still showing population trend across age buckets from the graph above.</li>
+          <li>I think its a lot stronger in allowing for comparable data, but the scale issue might still exist between the two years. Therefore, in my next sketch, I'll try to separate out the graphs to see if that helps in making line trends more apparent.</li>
+        </ul>
+
+        <figure>
+          <img style="width: 100%; height: auto" src="./images/a3/stackedBarGraph.jpg" alt="Stacked (Male & Female) Side by Side Bar Graph (1900s v. 2000s)" />
+          <figcaption>stacked bar graph of male and females (1900 and 2000s side-by-side)</figcaption>
+        </figure>
+
+        <p>Design Rationale for Sketch 3:</p>
+
+        <ul>
+          <li>I wanted to better see the change across age and gender in specific years so I separated the two years into side-by-side graphs.</li>
+          <li>This visualization helps communicate population trends across specific years because of the bars directly next to eachother. </li>
+            <li>It feels like comparing gender within a year is a little more difficult because of the stacked bars (female is easier than male). Furthermore, I 
+            think it might be a little hard to directly compare <strong>between</strong> the two years because the bars grow in opposing directions. I think when visualized using a tool, the population trend across the different age groups will be a lot more apparent with correct scaling, however might be a little
+            deceiving in comparing size of bars.</li>
+        </ul>
+
+        <h3>Reflection</h3>
+
+        <p>
+          Between the three sketch visualizations, I believe the second visualization of the stream graph answers the question of age bucket trend across years the best. 
+          The line graph is strong in being able to compare overall trend between the two years for each gender, but maybe makes it more difficult to compare between male and females. 
+          It shares the same potential issue of scaling hiding patterns due to the value difference between the two years; though in retrospect, the values are not too far off from one another, but could still be a potential issue.
+          The stream graph's area makes it very easy easy to compare the size difference between the two population, however maybe having some sort of number indicator would help in indicating how large exactly, since the sketch currently only has an x-axis of age buckets.
+          One potential change could be to use percentage of population to normalize rather than to use direct population value, however I wonder if this would be more decisiving for viewers as they compare between the two years considering that the streams are right next to one another.
+          The stacked bar graph was the ebst in comparing overall population across age groups in a particular year because we saw an aggregate of the population through the stacked bar charts. However, if the focus was on comparing between gender or gender across year, it would probably be the most
+          reflective task. I think I want to visualize and strengthen the stream graph as I think it did the best in visualizing what I wanted to communicate.
+		</p>
+      </section>
+
+      <section>
+        <h2>Phase Two: Final Design</h2>
+
+        <figure>
+			<img style="width: 100%; height: auto" src="./images/a3/a3.png" alt="Stream Graph of Gender in the 1900 vs. 2000s" />
+          <figcaption>Stream graph of Male & Female Population in the 1900s vs. 2000s</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>Design Process & Design Decisions</h2>
+
+        <p>I started my design process by first recreating my stream graph sketch with the raw data on Tableau. At first, I considered putting all of the 1900s on top of the y-axis, and all of the 2000s on the bottom axis; however I felt that
+          this made it difficult to compare between the two genders directly as the boundaries of each area would be inverted. I also considered separating the graphs by each gender for the two years, but I think ultimately liked how having the areas of each gender next to eachother helped in understanding overall population total (similar to the stacked bar chart)
+          Originally, I also had a y-axis, however, in order to create this visualization I had to make the female population values negative which was distracting to the overall visualization. Therefore, I decided to remove the y-axis and instead have the values pop up on the figure. Tableau made this very hard to control so I worry, that the values may be slightly distracting so this is definitely an area that could be improved.
+          Furthermore, I preferred having a stream rather than more separated bars because I think the connectedmess of the lines help with visualizing the "age buckets" rather than specific ages or having to specify an age range. I went with the default blue or pink to follow the traditional color designation that has been ingrained as natural. 
+        </p>
+
+        <h3>Reflection</h3>
+        <p>Phase 1 of sketches definitely influenced my design a lot, as I used the same question and really appreciate how the stream graph made it so natural to visualize gender and population ratio through area. I think it expressed the most over the other two sketches. For the most part, I kept the final visualization almost the same as the original, aside from some slight detail changes like axis title, y-axis, legend, etc; however, this was after experimenting with a lot of other variations of stream graphs. My line graph really helped me build up to the stream graph, and the stacked bar charted helped navigate the course of wanted to express. All of the sketches helped me determine what I wanted to keep and eliminate.</p>
+      </section>
+    </main>
+  </body>
+</html>
