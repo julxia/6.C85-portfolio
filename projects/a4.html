@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis & Society Assignment 4</title>
+    <link
+      rel="stylesheet"
+      href="https://vis-society.github.io/assignments/report.css"
+    />
+  </head>
+
+  <body>
+    <header>
+		<h1>
+		  <small><a
+			  href="https://vis-society.github.io/assignments/A4.html"
+			  style="text-decoration: none; color: inherit"
+			  target="_blank"
+			  >Assignment 4</a
+			></small
+		  ></small>
+		  Visualization Design
+		</h1>
+  
+		<p><strong>Julia Xia</strong> — <em>juliaxia@mit.edu</em></p>
+	  </header>
+
+    <main>
+      <h2 style="font-size: large;"><strong style="font-size: larger;">Proposition:</strong> From 1986-2020, more complaints were issued towards white-identifying officers than any other race. </h2>
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img style="width: 100%; height: auto" src="./images/a4/ForProp.png" alt="This image supports the proposition." />
+          <figcaption>The line graph illustrates the number of complaints issued towards officers across different ethnicities in the years between 1985-2020. </figcaption>
+        </figure>
+
+        <strong>DESIGN DECISION & RATIONALE</strong>
+
+        <ul>
+          <li><strong>Minimal Data Manipulation</strong><i> (Score: 2)</i><br>This makes my visualization persuasive and trustworthy given that there was no radical data processing that had to occur to visualize this graph. I really wanted to emphasize this point, as readers should be able to go and easily reconstruct this graph and persuade themselves. I had previously considered other forms of data manipulation like attempting to normalize on rough estimates of officers within particular precincts, however ultimately I thought this would hide too much data from the reader (which could make them more suspect).</li>
+          <li><strong>Simple Line Graph</strong> <i>(Score: 1.5)</i> (experiential design)<br>Again, I think the simplicity of the line chart demonstrates earnesty because of the full transparency of the data. I had considered bar or pie charts but ended up with aggregations that hid more data than I wanted it to (ie. percantages hid total numbers.)</li>
+          <li><strong>Well-labeled/Unifrom Axis</strong> <i>(Score: 2)</i><br> Along the same lines of simplicity, I wanted to demonstrate transparency to earn trust. This graph reads very straightforward and the reader is able to compare simply by looking at the lines (enough effort that they are able to verify the lines as trustworthy). I had previously considered labeling specific peaks of the graph, however I ultiamtely decided that this would be too distracting and would distract from the visual's clean aesthetic.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img style="width: 100%; height: auto" src="./images/a4/AgainstProp.png" alt="This image demonstrates evidence against the proposition." />
+          <figcaption>The area graph illustrates the total number of complaints per year issued towards officers across different ethnicities in the years between 1985-2020.</figcaption>
+        </figure>
+
+        <strong>DESIGN DECISION & RATIONALE</strong>
+
+        <ul>
+          <li><strong>Area Graph</strong><i>(Score: -1.0)</i><br>I think what is so interesting about this type of graph is its similarity to the line graph. It takes a while for a reader to grasp that the important values are within the size of the colored sections rather than the peaks or color ordering. This makes the visual much more of a reflective, rather than experiential experience. However, for someone who is looking at graphs quickly to get a quick gist, its very easy to misinterpret and see that the orange section denoting complaints against Asian officers are at the top, therefore they must have received the most. I was consdiering among a number of others graphs (playing with sizes of pie charts), however, this is the one that I thought was the most deceptive, while seemingly transparent.</li>
+          <li><strong>Area Sorting</strong><i>(Score: -1.5)</i><br>Again following the theory that readers may misinterpret this graph if they are viewing this very quickly, I knew the higher the colored section, the higher the values would hit on the y-axis. Therefore, ordering was very important when it came to being deceptive and arguing against the proposition. This still maintains the minimal data manipulation that gains trust, however the important values end up more encoded and so readers see height of the lines first. In this case, the green section is all the way at the bottom denoting "less" complaints. </li>
+          <li><strong>Minimal data manipulation</strong><i>(Score: 0)</i><br>Within the previous visualization, the minimal data visualization scored a 2 in terms of earnesty; however here I'm using transparency to be more deciving. This graph is still easily recreatable by users gaining more trust, however this gaining of trust is more for deceptive reasons (so the reader is able to accept the visaulization more easily rather than having to do more mental work which could unravel the actual nature of the data).</li>
+          <li><strong>Labeled Y-Axis</strong><i>(Score: -2.0)</i><br>The labeling of the y-axis is very deceptive because reading this visualization accurately would be to interpret the y-axis as change in the count of complain id between grid lines. Instead, the y-axis is denoted simply as the "Count of Complaint ID," which deceives the reader into beliving that the values are accurate for reading peaks and troughs. </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>This was a particularly interesting design challenge especially with respect to my visualization for "Against the Proposition." I formed my proposition relatively quickly while going through my exploratory
+          data analysis and so designing a genuine graph came very naturally. I focused on how to ensure that the reader do just enough work that they could verify any immediately conclusions, inorder to gain trust for the proposition. On the other hand,
+          creating the "Against the Proposition" visualization was a lot more difficult as I had to figure out a way I could be deceptive, but not too obvious about it. I really focused on Norman's idea of using more reflective tasks than experiential ones to achieve this. The idea was to feign
+          an experiential visualiztion through simple design for readers who quickly verify conclusions, however, the data ends up becoming a lot more encoded and difficult to read. I think what ended up surprising me a bit was realizing how part of being deceptive is to be earnest in
+          certain aspects (ie. minimal data manipulation, axis/legend labeling) so as not to rouse a lot of suspicious from users at the very first glance. You want the reader to be able to consume a certain perspective very quickly, and with trust rather than suspicion. 
+          <br/> <br/>
+           I define "ethical analysis and visualization" as an evaluation of the process by which a visualization is designed and constructed at the most minute details based upon its intended gaols. More specifically, what are all the decisions that the designer
+           made through the process, and how much skewing/encoding had to occur to construct that point. In terms of what draws the line between acceptable persuasive choices vs. misleading ones, I'd say the accuracy of its portrayal in relation to the original data; so what I would consider very misleading would be exceesive data manipulation or unreasonable data injection (ie. for missing values),
+           or mislabeled or skewed axis; however, I'd say acceptable persuasive choice would be soemthing similar to what I did by changing the line graph to an area graph. The data is technically still correct just more encoded (something you would miss if you weren't looking to carefully).
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
